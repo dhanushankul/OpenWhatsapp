@@ -1,3 +1,15 @@
 [build]
+  # Tell Netlify to execute commands inside the dashboard folder
+  base = "dashboard"
+
+  # Command to build the Vite dashboard
   command = "npm run build"
-  publish = "build" # or "dist", "out", depending on your build framework
+
+  # Output directory relative to the base folder (Vite outputs to 'dist')
+  publish = "dist"
+
+# Enable Single Page Application (SPA) routing so page reloads don't return 404s
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
