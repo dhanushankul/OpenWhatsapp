@@ -1,4 +1,3 @@
-cat << 'EOF' > /home/ubuntu/OpenWA/netlify.toml
 [build]
   base = "dashboard"
   publish = "dist"
@@ -8,4 +7,3 @@ cat << 'EOF' > /home/ubuntu/OpenWA/netlify.toml
   from = "/*"
   to = "/index.html"
   status = 200
-EOF
